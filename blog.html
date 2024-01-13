@@ -1,0 +1,336 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phero Tube</title>
+    <link rel="shortcut icon" href="./Logo.png" type="image/x-icon">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+</head>
+
+<body class="container mx-auto px-5">
+    <header class="my-10">
+
+        <nav class="navbar navbar-expand-md bg-light navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="./Logo.png" alt="Logo" class="w-full">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="btn btn-primary" href="index.html">Home</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <hr class="mb-10">
+
+    <main class="mb-5">
+        <main class="container mb-5">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Discuss the scope of var, let, and const.
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-justify">
+                            <p>
+                                In JavaScript, <span class="font-bold">'var'</span>, <span
+                                    class="font-bold">'let'</span>,
+                                and <span class="font-bold">'const'</span>. are used to declare variables, but they
+                                differ
+                                in terms of their
+                                scope, hoisting
+                                behavior, and mutability. Here's a discussion of the scope of each:
+                            </p>
+                            <div class="mt-5">
+                                <span class="text-xl font-bold">
+                                    1. var:
+                                </span> <br>
+                                <span class="font-bold">Function-Scoped:</span> Variables declared with <span
+                                    class="font-bold">'var'</span>
+                                have function scope,
+                                meaning they are only
+                                accessible within the function
+                                in which they are defined. If a <span class="font-bold">'var'</span> variable is
+                                declared
+                                outside of any
+                                function, it becomes a global
+                                variable and is
+                                accessible throughout the entire program.
+                                <br>
+                                <span class="font-bold">Hoisting:</span> <span class="font-bold">'var'</span> variables
+                                are
+                                hoisted to
+                                the top of their function or
+                                global scope. This means that you can access a <span class="font-bold">'var'</span>
+                                variable
+                                before it's declared in the code, but it will have an initial value of <span
+                                    class="font-bold">'undefined'</span>.
+                                <br>
+                            </div>
+                            <div class="mt-5">
+                                <span class="text-xl font-bold">
+                                    2. let:
+                                </span> <br>
+                                <span class="font-bold">Block-Scoped:</span> Variables declared with <span
+                                    class="font-bold">'let'</span> have
+                                block scope, which means they are accessible only within the
+                                nearest enclosing block (typically a pair of curly
+                                braces '{}'). This makes <span class="font-bold">'let'</span> more predictable and safer
+                                than <span class="font-bold">'var'</span>.
+                                <br>
+
+                                <span class="font-bold">Hoisting:</span> <span class="font-bold">'let'</span> variables
+                                are
+                                also
+                                hoisted, but unlike <span class="font-bold">'var'</span> , they are not initialized.
+                                Accessing a <span class="font-bold">'let'</span> variable before its declaration results
+                                in
+                                a <span class="font-bold">'ReferenceError'</span>.
+                                <br>
+                            </div>
+
+
+                            <div class="mt-5">
+                                <span class="text-xl font-bold">
+                                    1. const:
+                                </span> <br>
+                                <span class="font-bold">Block-Scoped:</span> Variables declared with <span
+                                    class="font-bold">'const'</span> also
+                                have block scope, similar to <span class="font-bold">'let'</span>. They are accessible
+                                only
+                                within the nearest
+                                enclosing block.
+                                <br>
+
+                                <span class="font-bold">Immutable:</span> Variables declared with <span
+                                    class="font-bold">'const'</span>
+                                are immutable, which means their
+                                value cannot be changed once assigned. However, for
+                                objects and arrays declared with <span class="font-bold">'const'</span>, the object or
+                                array
+                                itself is
+                                still mutable; you just can't
+                                reassign the
+                                variable to a different object or array.
+                                <br>
+                            </div>
+                            <br>
+                            <p>
+                                In modern JavaScript, it's generally recommended to use <span
+                                    class="font-bold">'const'</span> by
+                                default for variable declarations and
+                                only use <span class="font-bold">'let'</span> when
+                                you need to reassign the variable's value. Avoid using <span
+                                    class="font-bold">'var'</span>
+                                in modern
+                                code because of its function-scoped
+                                nature and
+                                potential for unexpected behavior due to hoisting. Using <span
+                                    class="font-bold">'const'</span> and
+                                <span class="font-bold">'let'</span> helps improve code readability
+                                and
+                                maintainability while reducing the risk of bugs.
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Tell us the use cases of null and undefined
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-justify">
+                            <!-- Your content here -->
+                            <p>
+                                In JavaScript, <span class="font-bold">'null'</span>and <span
+                                    class="font-bold">'undefined'</span> are two distinct values that are often used in
+                                different contexts. Understanding their use cases is essential for
+                                writing clean and bug-free code.
+                            </p>
+
+                            <div class="mt-5">
+                                <span class="text-xl font-bold">
+                                    1. null:
+                                </span> <br>
+                                <span class="font-bold">Intentional Absence of Value:</span> You can assign <span
+                                    class="font-bold">'null'</span>
+                                to a variable or property to explicitly indicate that there is no value or that the
+                                value is
+                                intentionally empty.
+                                <br>
+
+                                <span class="font-bold">As a Placeholder:</span> <span class="font-bold">'null'</span>
+                                can
+                                be used as a placeholder for an object or value that will be assigned later in your
+                                code.
+                                <br>
+
+                                <span class="font-bold">Return Value:</span> Functions can return <span
+                                    class="font-bold">'null'</span> to indicate that they didn't produce a valid result.
+                                <br>
+                            </div>
+                            <div class="mt-5">
+                                <span class="text-xl font-bold">
+                                    2. undefined:
+                                </span> <br>
+                                <span class="font-bold">Implicit Absence of Value:</span> <span
+                                    class="font-bold">'undefined'</span> represents the absence of a value in a variable
+                                or
+                                property when it has not been assigned any value. It's often the
+                                default value for uninitialized variables.
+                                <br>
+
+                                <span class="font-bold">Function Parameters:</span> If a function is called with fewer
+                                arguments than it expects, the missing arguments will be <span
+                                    class="font-bold">'undefined'</span>.
+
+                                <br>
+
+                                <span class="font-bold">Return Value:</span> Functions that don't explicitly return a
+                                value
+                                will return <span class="font-bold">'undefined'</span>.
+
+                                <br>
+
+
+                                <span class="font-bold">Accessing Non-existent Properties:</span> When you try to access
+                                a
+                                property that doesn't exist in an object, you'll get <span
+                                    class="font-bold">'undefined'</span>.
+
+                            </div>
+                            <br>
+
+                            <p>
+                                In summary, <span class="font-bold">'null'</span> is typically used to represent an
+                                intentional absence of a value or as a
+                                placeholder, while <span class="font-bold">'undefined'</span>
+                                indicates that a variable or property has not been assigned a value or when accessing
+                                non-existent properties. It's
+                                important to understand these distinctions to write clean and predictable JavaScript
+                                code.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            What do you mean by REST API?
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body text-justify">
+                            <!-- Your content here -->
+                            <p>
+                                REST API stands for Representational State Transfer Application Programming Interface.
+                                It is
+                                an architectural style for
+                                designing networked applications, and it has become the predominant approach for
+                                building
+                                web services and APIs
+                                (Application Programming Interfaces) on the internet. REST is not a specific technology
+                                or
+                                protocol but rather a set of
+                                constraints and principles that guide how web services should be structured and interact
+                                with each other. <br><br>
+
+                                <span class="font-bold">
+                                    Key principles and characteristics of RESTful APIs include:
+                                </span> <br><br>
+
+                                <span class="font-bold">1. Stateless:</span> Each request from a client to a server must
+                                contain all the information needed to understand and process the request.
+                                The server does not store any client state between requests. This makes APIs scalable
+                                and
+                                easy to manage.<br>
+
+                                <span class="font-bold">2. Client-Server Architecture:</span> REST separates the client
+                                (the
+                                consumer of the API) and the server (the provider of the API) into distinct entities.
+                                This separation allows for better scalability and independence of the two.<br>
+
+                                <span class="font-bold">3. Resource-Based:</span> In REST, resources are the key
+                                abstractions. Resources are identified by URIs (Uniform Resource Identifiers), and
+                                clients interact with these resources using standard HTTP methods like GET (retrieve
+                                data),
+                                POST (create new data), PUT
+                                (update data), and DELETE (remove data).<br>
+
+                                <span class="font-bold">4. Representation:</span> Resources can have multiple
+                                representations (e.g., JSON, XML, HTML) to accommodate the needs of different clients.
+                                Clients can specify the desired representation using HTTP headers.<br>
+
+                                <span class="font-bold">5. Statelessness:</span> Each request to the server must be
+                                self-contained and include all the necessary information. The server does not store
+                                information about the client's state between requests.<br>
+
+                                <span class="font-bold">6. HTTP Methods:</span> RESTful APIs often use HTTP methods to
+                                perform actions on resources. For example, GET to retrieve data, POST to create
+                                data, PUT to update data, and DELETE to remove data.<br>
+
+                                <span class="font-bold">7. Stateless Communication:</span> RESTful APIs rely on
+                                stateless
+                                communication. This means that each request from a client to a server must contain all
+                                the information needed to understand and process the request. Servers do not store
+                                information about the client's state
+                                between requests.<br>
+
+                                <span class="font-bold">8. Uniform Interface:</span> REST APIs follow a uniform and
+                                consistent interface, making it easier for developers to understand and work with
+                                different APIs.<br>
+
+                                <span class="font-bold">9. Idempotent Operations:</span> Some HTTP methods, like GET and
+                                PUT, are idempotent, meaning that if you make the same request multiple times, the
+                                result will be the same as making it once. This property ensures that repeating requests
+                                won't have unintended side
+                                effects.<br>
+
+                                <span class="font-bold">10. Layered System:</span> REST allows for a layered system
+                                architecture, where each layer (e.g., load balancers, security, caching) adds its own
+                                functionality without affecting the core logic of the API.<br><br>
+
+                                RESTful APIs are widely used for building web services because of their simplicity,
+                                scalability, and compatibility with
+                                the HTTP protocol, which is the backbone of the World Wide Web. They are commonly used
+                                in
+                                web and mobile applications to
+                                retrieve, create, update, and delete data over the internet.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
